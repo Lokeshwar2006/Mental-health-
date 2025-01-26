@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Safety Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Safety Companion</h1>
+            <nav>
+                <button id="homeBtn" class="nav-btn active">Home</button>
+                <button id="contactsBtn" class="nav-btn">Contacts</button>
+                <button id="trackingBtn" class="nav-btn">Tracking</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="homeSection" class="active-section">
+                <div class="dashboard">
+                    <div class="status-card">
+                        <h2>Safety Status</h2>
+                        <div id="safetyStatus" class="status safe">Safe</div>
+                    </div>
+                    <div class="quick-actions">
+                        <button id="panicButton" class="panic-btn">Emergency Alert</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contactsSection">
+                <div class="contact-management">
+                    <h2>Emergency Contacts</h2>
+                    <form id="contactForm">
+                        <input type="text" id="contactName" placeholder="Contact Name" required>
+                        <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                        <button type="submit">Add Contact</button>
+                    </form>
+                    <div id="contactList" class="contact-list">
+                        <!-- Contacts will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="trackingSection">
+                <div class="location-tracking">
+                    <h2>Location Tracking</h2>
+                    <div id="locationDisplay" class="location-display">
+                        No active tracking
+                    </div>
+                    <div class="tracking-controls">
+                        <button id="startTracking">Start Tracking</button>
+                        <button id="stopTracking">Stop Tracking</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Safety Companion</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
